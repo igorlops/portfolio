@@ -199,21 +199,19 @@ span{
 .titulo-galeria{
     border-top: 1px solid rgb(58, 16, 155);
     width: 12em;
-    margin: 2px auto
+    margin: 1vh auto;
+    display: flex;
+    justify-content: center;
 }
 .titulo-galeria:hover{
-    border-top: 1px solid rgb(58, 16, 155);
     width: 100%;
     transition: 1s;
-    /* margin: 1vh auto; */
 }
 .titulo-galeria h2{
     color: white;
     text-align: center;
-     margin:2em auto;
-   /* width: 2em; */
-   font-family:'Awesome';
-
+    margin:2em 0;
+    font-family:'Awesome';
 }
 
 .galeria-single{
