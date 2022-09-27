@@ -29,7 +29,7 @@ body{
 
 .nav-bar{
     margin: 0 auto;
-    background-image: linear-gradient(to right top, #000000, #110006, #190011, #1d001a, #1c0025, #1b012b, #170232, #11043a, #13033c, #16023e, #19013f, #1c0041);    position: relative;
+    background-color: #11043a;
     width: 100%;
     z-index: 2;
 }
@@ -50,7 +50,7 @@ body{
     color: white;
     text-decoration: none;
     margin: 0.25em;
-    font-size: 2vh;
+    font-size: 3vh;
     border-radius: 50%;
 }
 nav>div.menu-desktop{
@@ -60,15 +60,16 @@ nav>div.menu-desktop{
 }
 .menu-desktop ul li{
     display: inline-block;
-    margin: 0.25em 1em;
+    margin: 1em 0.6em;
 }
 .menu-desktop > ul > li > a{
     color: white;
     text-decoration: none;
+    font-size: 2vh;
 }
 ul > li > a:hover{
     border-bottom: 1px solid rgb(58, 16, 155);
-    transition: 1s;
+    transition: 2s;
 }
 .menu-mobile {
     position: absolute;
@@ -86,7 +87,7 @@ ul > li > a:hover{
 .menu-mobile > #btn-menu > i{
     color: white;
     cursor: pointer;
-    font-size: 3vh;
+    font-size: 5vh;
     z-index: 4;
 }
 .menu-mobile > ul > li{
@@ -95,7 +96,6 @@ ul > li > a:hover{
 .menu-mobile > ul > li > a{
     text-decoration: none;
     margin: 2em auto;
-    border-bottom: 1px solid #ccc;
     width: 100%;
     font-size: 20px;
     color: white;
