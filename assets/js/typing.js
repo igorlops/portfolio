@@ -12,4 +12,8 @@ function typeWrite(element){
             element.innerHTML += letra;
         }, 75*i);
     })
+
+    
+
 }
+
