@@ -11,13 +11,6 @@ function typeWrite(element){
         setTimeout(()=>{
             element.innerHTML += letra;
         }, 75*i);
-    
-
-    if(i==43){
-        setInterval(()=>{
-            typeWrite(welcome)
-        },4000);
-    }
 
 })
 
