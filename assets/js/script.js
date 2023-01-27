@@ -1,3 +1,6 @@
+
+//  ANIMACAO DO RESPONSIVO DO MENU HAMBURGUER
+
 $(function(){
     $('.menu-mobile #btn-menu').click(function(){
         var el = $(this).parent().find('ul');
@@ -7,6 +10,9 @@ $(function(){
     });
 
 });
+
+
+// ANIMACAO DOS BOTOES DE NAVEGACAO
 
 
 $('.nav a[href^="#"]').on('click', function(e) {
@@ -30,6 +36,8 @@ $('.menu a[href^="#"]').on('click', function(e) {
 });
 
 
+// BOTOES DA SKILL
+
 $( ".button-right" ).click(function() {
   $( ".skills" ).animate({ "left": "+=50px" }, 200);
 });
@@ -38,3 +46,15 @@ $( ".button-left" ).click(function(){
   $( ".skills" ).animate({ "left": "-=50px" }, 200 );
 });
 
+
+// form
+
+$('.formulario').on('submit',function(){
+  var nome = $(this).find('input[name=nome]'), nome = nome.val();
+  var email = $(this).find('input[name=email]'), email = email.val();
+  var mensagem = $(this).find('name=texto'), mensagem = mensagem.val();
+  var texto = 'Olá destinatário, \n Meu nome é ' + nome + 'e meu email é ' + email +
+  ' a mensagem que escrevi é ' + mensagem;
+  $(this).find('input[name=mensagem]').attr('value', texto);
+
+})

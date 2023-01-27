@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 </head>
 
 
@@ -136,7 +136,7 @@
 
     <section id="projetos">
         <div class="container">
-            <h2>Projetos</h2>
+            <h2>Alguns exercícios de estudo</h2>
 
             <div class="projeto-flex">
                 <div class="projeto-single" data-aos="zoom-in" data-aos-duration="1000"
@@ -217,17 +217,33 @@
         </div><!--container-->
     </section><!--projetos-->
 
+    <section class="parallax">
+        <div class="overlay-parallax"></div>
+        <div class="container">
+            <h1 class="titulo-parallax" data-aos="fade-right" data-aos-duration="1000">Tenho outros projetos no meu github</h1>
+            <p class="p-parallax" data-aos="fade-right" data-aos-duration="1000">Visite minhas redes no rodapé ou no meu principal!
+                <br> Entre em contato &#128516;
+            </p>
+        </div>
+    </section>
+
+    <!-- Contato -->
+
     <section id="contato">
         <div class="container box-form">
             <h1>Entre em Contato!</h1>
-            <form class="formulario" method="post">
+            <form class="formulario" method="post" action="envia_email.php" target="_blank">
                 <label>Nome</label>
                 <input type="text" placeholder="Nome" name="nome" class="nome" />
                 <label>Email</label>
                 <input type="email" placeholder="Email" name="email" class="email" />
+                <label>Assunto</label>
+                <input type="text" value="Tenho interesse no seu trabalho.." name="assunto" class="assunto" />
                 <label>Mensagem</label>
-                <textarea placeholder="Mensagem"></textarea>
-                <button type="submit">Enviar</button>
+                <textarea name="mensagem" placeholder="Mensagem"></textarea>
+                <input id="button-form" type="submit" name="submit" value="Enviar"/>
+
+               
             </form><!--formulario-->
         </div><!--box-form-->
     </section><!--contato-->
@@ -279,7 +295,7 @@
     </section><!--footer-->
     <script src="./assets/js/typing.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="./assets/js/button.js"></script>
+    <script src="./assets/js/script.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
