@@ -30,4 +30,11 @@ $('.menu a[href^="#"]').on('click', function(e) {
 });
 
 
+$( ".button-right" ).click(function() {
+  $( ".skills" ).animate({ "left": "+=50px" }, 200);
+});
+ 
+$( ".button-left" ).click(function(){
+  $( ".skills" ).animate({ "left": "-=50px" }, 200 );
+});
 

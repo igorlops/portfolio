@@ -209,84 +209,32 @@ ul > li > a:hover{
 }
 
 
-.titulo-galeria{
-    border-top: 1px solid rgb(58, 16, 155);
-    width: 12em;
-    margin: 1vh auto;
-    display: flex;
-    justify-content: center;
-}
-.titulo-galeria:hover{
-    width: 100%;
-    transition: 1s;    
-}
-.titulo-galeria h2{
-    color: white;
-    text-align: center;
-    margin:2em 0;
-    font-family:'Awesome';
-}
-
-.galeria-single{
-    /* justify-content: center; */
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    margin: 20px auto;
-    flex-wrap: nowrap;
-}
-.galeria-single .card{
-    width: 100%;
-    height: auto;
-    text-align: center;
-    background-color: white;
-    border-radius: 1em;
-    margin: 1em;
-    box-shadow: rgba(224, 224, 224, 0.25) 4px 10px 55px, rgba(219, 219, 219, 0.12) 0px -12px 30px, rgba(160, 160, 160, 0.12) 0px 4px 6px, rgba(190, 190, 190, 0.17) 0px 12px 13px, rgba(230, 230, 230, 0.09) 0px -3px 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    padding: 3px;
-}
-.card h2{
-    border-bottom: 1px solid #ccc;
-    margin: 0 0 2em 0;
-    text-align: center;
-}
-.galeria-single .card .btn-more{
-    background-image: linear-gradient(to right top, #030304, #131634, #202060, #38268d, #5d25b9);    color: white;
-    display: inline-block;
-    width: 100%;
-    border-radius: 2em;
-    padding: 6px;
-}
-
-.galeria-single .card .btn-more:hover{
-    background-image: linear-gradient(to left bottom, #030304, #131634, #202060, #38268d, #5d25b9);    
-    color: white;
-}
-.galeria-single .card a{
-    text-decoration: none;
-    
-}
 .tecnologias{
     color: white;
     text-align: center;
     margin: 5em auto;
 }
 .tecnologias h2{
-    font-family:'Awesome';
+    font-family:'Helvetica';
 }
+.quadro-skills{
+    max-width: 80%;
+    margin: 0 auto;
+    overflow: hidden; 
+    position: relative;
+     top: 4em;
+}
+
 .skills{
+    position: relative;
     display: flex;
     /* max-width: 1280px; */
     width: 100%;
+    margin: 0 auto;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
-    position: relative;
-    top: 9em;
 }
 .skills img{
     width: 7em;
@@ -298,17 +246,36 @@ ul > li > a:hover{
     box-shadow: 1px 3px #ccc;
 }
 
+.botoes{
+    
+    color: #030304;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+    top: 9em;
+}
+.button-single{
+    display: block;
+    width: 50px;
+    height: 50px;
+    color: black;
+    background-color:white;
+    border: 1px solid #250055;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 6;
+}
 /* Projetos  */
 
 
 
 section#projetos{
-    position: relative;
-    top: -15em;
     background-color: white;
 }
 section#projetos h2{
-    margin: 0 auto;
+    margin: -15em auto 4em auto;
     text-align: center;
     border-bottom: 1px solid #ccc;
 }
@@ -531,19 +498,7 @@ section.footer{
         justify-content: center;
         align-items: center;
     }
-    .skills{
-        display: flex;
-        width: 100%;
-        transition: 2s;
-        flex-direction: row-reverse;
-        padding: 2%;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-around;
-        position: relative;
-        top: 9.9em;
-      
-    }
+
     .projeto-flex{
         width: 100%;
         flex-direction: row;
@@ -571,4 +526,11 @@ section.footer{
         justify-content: center;
         margin: 2em 0;
     }   
+}
+
+@media screen and (max-width:1240px) {
+    .button-single{
+        display: block;
+    }
+    
 }
