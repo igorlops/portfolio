@@ -1,27 +1,32 @@
-<?
-                
-                
-                $destinatario = "claudioigorai@gmail.com";
-                
-                $nome = $_REQUEST['nome'];
-                $email = $_REQUEST['email'];
-                $mensagem = $_REQUEST['mensagem'];
-                $assunto = $_REQUEST['assunto'];
-                
-                 // monta o e-mail na variavel $body
-                
-                $body = "===================================" . "\n";
-                $body = $body . "FALE CONOSCO - TESTE COMPROVATIVO" . "\n";
-                $body = $body . "===================================" . "\n\n";
-                $body = $body . "Nome: " . $nome . "\n";
-                $body = $body . "Email: " . $email . "\n";
-                $body = $body . "Mensagem: " . $mensagem . "\n\n";
-                $body = $body . "===================================" . "\n";
-                
-                // envia o email
-                mail($destinatario, $assunto , $body, "From: $email\r\n");
-                
-                // redireciona para a página de obrigado
-                header("location:obrigado.htm");
-                
-                ?>
+<?php
+  //Variáveis
+  $nome = $_POST['nome'];
+  $email = $_POST['email'];
+  $mensagem = $_POST['mensagem'];
+  $data_envio = date('d/m/Y');
+  $hora_envio = date('H:i:s');
+
+  //Campo E-mail
+  $arquivo = "
+    <html>
+      <p><b>Nome: </b>$nome</p>
+      <p><b>E-mail: </b>$email</p>
+      <p><b>Mensagem: </b>$mensagem</p>
+      <p>Este e-mail foi enviado em <b>$data_envio</b> às <b>$hora_envio</b></p>
+    </html>
+  ";
+  
+  //Emails para quem será enviado o formulário
+  $destino = "claudioigorai@gmail.com";
+  $assunto = "Contato pelo Site";
+
+  //Este sempre deverá existir para garantir a exibição correta dos caracteres
+  $headers  = "MIME-Version: 1.0\n";
+  $headers .= "Content-type: text/html; charset=iso-8859-1\n";
+  $headers .= "From: $nome <$email>";
+
+  //Enviar
+  mail($destino, $assunto, $arquivo, $headers);
+  
+  echo "<meta http-equiv='refresh' content='10;URL=../index.html'>";
+?>
