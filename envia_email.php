@@ -1,3 +1,4 @@
+
 <?php
   //Variáveis
   $nome = $_POST['nome'];
@@ -28,5 +29,5 @@
   //Enviar
   mail($destino, $assunto, $arquivo, $headers);
   
-  echo "<meta http-equiv='refresh' content='10;URL=../index.html'>";
-?>
+  header("location:./index.html");
+  ?>
