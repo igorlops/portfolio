@@ -29,5 +29,7 @@
   //Enviar
   mail($destino, $assunto, $arquivo, $headers);
   
-  echo "<meta http-equiv='refresh' content='10;URL=./index.html'>";
+  echo "<meta http-equiv='refresh' content='5;URL=./index.html'>";
   ?>
+  <h1>Enviado com sucesso</h1>
+  <h1>Estamos te redirecionando para a página principal</h1>
