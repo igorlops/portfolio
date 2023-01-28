@@ -47,14 +47,9 @@ $( ".button-left" ).click(function(){
 });
 
 
-// form
+// hover nos projetos
 
-$('.formulario').on('submit',function(){
-  var nome = $(this).find('input[name=nome]'), nome = nome.val();
-  var email = $(this).find('input[name=email]'), email = email.val();
-  var mensagem = $(this).find('name=texto'), mensagem = mensagem.val();
-  var texto = 'Olá destinatário, \n Meu nome é ' + nome + 'e meu email é ' + email +
-  ' a mensagem que escrevi é ' + mensagem;
-  $(this).find('input[name=mensagem]').attr('value', texto);
-
+$('.projeto-single').hover(function(e){
+  $('.overlay',this).slideToggle();
+  $('.button-projeto').css("display","block")
 })
